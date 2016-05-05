@@ -62,10 +62,6 @@ services:
     arguments: ['@workspace.manager']
     tags:
       - { name: cache.context }
-  multiversion.stream_wrapper.migrate:
-    class: Drupal\multiversion\StreamWrapper\MigrateStream
-    tags:
-      - { name: stream_wrapper, scheme: migrate }
   logger.channel.workspace:
     parent: logger.channel_base
     arguments: ['cron']
